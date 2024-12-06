@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Anasayfa</title>
+</head>
+<body>
+  <h1>Blog Postları</h1>
+  <ul>
+    <% posts.forEach(post => { %>
+      <li>
+        <h2><a href="/posts/<%= post._id %>"><%= post.title %></a></h2>
+        <p><%= post.detail %></p>
+        <small><%= post.dateCreated.toDateString() %></small>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html> 
